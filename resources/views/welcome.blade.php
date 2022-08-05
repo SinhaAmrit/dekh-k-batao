@@ -28,12 +28,7 @@
   </div>
         </span>
       </h1>
-      <p class="font-pt-serif font-secondary mb-4">
-        Enter a complete URL so we can crawl through.
-      </p>
-      <div class="font-montserrat">
-        </div>
-        <livewire:search />
+      <livewire:search />
     </div>
     <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
       <div class="relative">
@@ -41,11 +36,11 @@
       </div>
       <img src='dist/assets/MacBook Pro.png' alt="Macbook" />
       <div class="relative">
-        <img src='dist/assets/Highlight2.svg' alt="" class="absolute -bottom-10 -right-6" />
+        <img src='dist/assets/Highlight2.svg' alt="" class="absolute -bottom-10 -right-0" />
       </div>
     </div>
   </section>
-
+  
   <!-- How it works -->
   <section class="bg-black text-white sectionSize">
     <div>

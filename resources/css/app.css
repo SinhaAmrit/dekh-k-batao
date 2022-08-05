@@ -6,11 +6,11 @@
 
 @layer components {
     .sectionSize {
-        @apply lg: px-48 md:px-12 px-4 py-14 flex flex-col items-center;
+        @apply lg:px-48 md:px-12 px-4 py-14 flex flex-col items-center;
     }
-
+    
     .secondaryTitle {
-        @apply font-pt-serif text-3xl bg-left-bottom bg-no-repeat pb-8 px-16 mb-8;
+        @apply font-serif text-3xl bg-left-bottom bg-no-repeat pb-8 px-16 mb-8;
     }
 }
 

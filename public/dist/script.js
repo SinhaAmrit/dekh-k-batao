@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     });
 
   document
-    .querySelector("#hideMenu")
+    .querySelector(".hideMenu")
     .addEventListener("click", function (event) {
       document.querySelector("#mobileNav").classList.add("hidden");
     });

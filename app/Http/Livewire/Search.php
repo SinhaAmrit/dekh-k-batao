@@ -9,15 +9,18 @@ class Search extends Component
 {
     public $url;
     public $result;
-    // public $result;
     protected $rules = [
         'url' => 'required|active_url',
     ];
 
+    public function resetValues()
+    {
+        $this->reset(['url', 'result']);
+    }
+
     public function updated($url)
     {
         $this->validateOnly($url);
-        // dd($this->url);
     }
     
     public function searchURL()
@@ -32,18 +35,16 @@ class Search extends Component
         } 
         catch (\Dusterio\LinkPreview\Exceptions\ConnectionErrorException $e)
         {
-            echo "Oh no!";
+            session()->flash('message', 'Oh no! Something went wrong');
+            return view('livewire.search');
         }
         $preview = $previewClient->getPreview('general');
         // Convert output to array
         $this->result = $preview->toArray();
-        // dd($result);
-        $this->url = "";
     }
 
     public function render()
     {
-        // dd($this->result);
         return view('livewire.search',['data' => $this->result]);
     }
 }

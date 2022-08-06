@@ -4,81 +4,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dekh k batao</title>
+  <title>देख कर बताओ</title>
   <link rel="stylesheet" href="dist/styles.css" />
   <script src="dist/script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <livewire:styles />
 </head>
 
-<body>
+<body class="bg-secondary">
   <!-- Navigation -->
   <x-navbar />
   <x-mobile-nav />
 
   <!-- Hero -->
-  <section
-    class="pt-24 md:mt-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
-    <div class="md:flex-1 md:mr-10">
-      <h1 class="font-pt-serif text-5xl font-bold mb-7">
-        Dekh k batao
-        <span class="bg-underline1 bg-left-bottom bg-no-repeat pb-2 bg-100%">
-            <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-    Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-  </div>
-        </span>
-      </h1>
-      <livewire:search />
-    </div>
-    <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
-      <div class="relative">
-        <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
-      </div>
-      <img src='dist/assets/MacBook Pro.png' alt="Macbook" />
-      <div class="relative">
-        <img src='dist/assets/Highlight2.svg' alt="" class="absolute -bottom-10 -right-0" />
-      </div>
-    </div>
-  </section>
-  
+  <livewire:search />
+
   <!-- How it works -->
-  <section class="bg-black text-white sectionSize">
+  <section class="bg-black text-white sectionSize" style="margin-top: 10vh;">
     <div>
-      <h2 class="secondaryTitle bg-underline2 bg-100%">How it works</h2>
+      <h2 class="secondaryTitle bg-underline2 bg-100%">How API works</h2>
     </div>
     <div class="flex flex-col md:flex-row">
       <div class="flex-1 mx-8 flex flex-col items-center my-4">
         <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
           1
         </div>
-        <h3 class="font-montserrat font-medium text-xl mb-2">Eat</h3>
+        <h3 class="font-montserrat font-medium text-xl mb-2">Ask</h3>
         <p class="text-center font-montserrat">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Send us a get request in the formate xyz.
         </p>
       </div>
       <div class="flex-1 mx-8 flex flex-col items-center my-4">
         <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
           2
         </div>
-        <h3 class="font-montserrat font-medium text-xl mb-2">Sleep</h3>
+        <h3 class="font-montserrat font-medium text-xl mb-2">Admire</h3>
         <p class="text-center font-montserrat">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          We will process your request in the backend.
         </p>
       </div>
       <div class="flex-1 mx-8 flex flex-col items-center my-4">
         <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
           3
         </div>
-        <h3 class="font-montserrat font-medium text-xl mb-2">Rave</h3>
+        <h3 class="font-montserrat font-medium text-xl mb-2">Get the work done</h3>
         <p class="text-center font-montserrat">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          You will receive a json response from us.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Features -->
-  <section class="sectionSize bg-secondary">
+  <section id="features" class="sectionSize bg-secondary">
     <div>
       <h2 class="secondaryTitle bg-underline3 bg-100%">Features</h2>
     </div>
@@ -140,7 +118,7 @@
   </section>
 
   <!-- Pricing -->
-  <section class="sectionSize bg-secondary py-0">
+  <!-- <section class="sectionSize bg-secondary py-0">
     <div>
       <h2 class="secondaryTitle bg-underline4 mb-0 bg-100%">Pricing</h2>
     </div>
@@ -228,10 +206,10 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <!-- FAQ  -->
-  <section class="sectionSize items-start pt-8 md:pt-36 bg-black text-white">
+  <section id="FAQ" class="sectionSize items-start pt-8 md:pt-36 bg-black text-white">
     <div>
       <h2 class="secondaryTitle bg-highlight3 p-10 mb-0 bg-center bg-100%">
         FAQ
@@ -241,12 +219,12 @@
     <div toggleElement class="w-full py-4">
       <div class="flex justify-between items-center">
         <div question class="font-montserrat font-medium mr-auto">
-          Where can I get this HTML template?
+          Do you store our data?
         </div>
         <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
       </div>
       <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
-        You can download it on Gumroad.com
+        No, we never store your data.
       </div>
     </div>
     <hr class="w-full bg-white" />
@@ -254,7 +232,7 @@
     <div toggleElement class="w-full py-4">
       <div class="flex justify-between items-center">
         <div question class="font-montserrat font-medium mr-auto">
-          Is this HTML template free?
+          Is this API completely free?
         </div>
         <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
       </div>
@@ -281,8 +259,8 @@
 
   <!-- Footer -->
   <section class="bg-black sectionSize">
-    <div class="mb-4">
-      <img src='dist/assets/Logo_white.svg' alt="Logo" class="h-4" />
+    <div class="mb-4 text-3xl">
+      👁‍🗨
     </div>
     <div class="flex mb-8">
       <a href="#">
@@ -299,12 +277,33 @@
       </a>
     </div>
     <div class="text-white font-montserrat text-sm">
-      © 2021 STARTUP. All rights reserved
+      Made With ❤ By Amrit Sinha
+      <br>
+      Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
     </div>
   </section>
-  <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-    Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-  </div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+  </script>
+      <script type="text/javascript">
+        function takeshot() {
+            const screenshotTarget = document.getElementById('card');
+            html2canvas(screenshotTarget).then((canvas) => {
+            const base64image = canvas.toDataURL("image/png");
+            var win = window.open();
+            win.document.write('<iframe src="' + base64image  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+            });
+        }
+    </script>
+    <!-- Required popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+      });
+    </script>
   <livewire:scripts />
 </body>
 </html>

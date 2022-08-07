@@ -38,17 +38,39 @@
         <span href="{{$preview['url']}}" class="w-full block h-full">
           <img alt="opps! No cover image to show 😢" src="{{ $preview['image']['url']}}" class="max-h-40 w-full object-cover"/>
           <div class="bg-white dark:bg-gray-800 w-full p-4">
-            <p class="text-indigo-500 text-sm underline font-medium">
-              {{$preview['name']}}
-            </p>
-            <p class="text-xs mb-2 dark:text-white">
-              Domain: {{$preview['domain']}}
-            </p>
+            <div class="flex items-center">
+              @if(isset($data['icon']['url']))
+              <a href="#" class="block relative">
+                <img alt="profil" src="{{$data['icon']['url']}}" class="mx-auto object-cover rounded-full h-10 w-10 "/>
+              </a>
+              @endif
+              <div class="flex flex-col ml-2 justify-between">
+              <span class="font-semibold text-indigo-500 text-sm">
+                {{$data['name']}} 
+                <span class="text-xs">({{$data['domain']}}) </span>
+              </span>
+              <span class="dark:text-gray-400 text-xs flex items-center">
+                Size: @if(isset($data['size'])) {{$data['size']}} @else -- @endif KB @if(isset($data['redirected']) && $data['redirected'] == true)| redirected URL @endif @if(isset($data['trackersDetected']) && $data['trackersDetected'] == true)| Trackers Detected @endif
+              </span>
+              </div>
+            </div>
+            <hr>
+            <span class="flex w-full mx-auto mb-4 text-xs">
+                @if(isset($data['details']['viewCount'])) 
+                  {{$data['details']['viewCount']}} Views, 
+                @endif 
+                @if(isset($data['details']['likeCount']))
+                  {{$data['details']['likeCount']}} Likes,
+                @endif 
+                @if(isset($data['details']['commentCount']))
+                  {{$data['details']['commentCount']}} Comments
+                @endif
+              </span>
             <p class="text-gray-800 underline dark:text-white text-xl font-medium mb-2">
-              {{$preview['title']}}
+              {{$data['title']}}
             </p>
             <p class="text-gray-400 dark:text-gray-300 font-light text-md">
-              {{$preview['description']}}
+              {{$data['description']}}
             </p>
             <!-- Tags Section -->
             <div class="flex flex-wrap justify-starts items-center mt-4">

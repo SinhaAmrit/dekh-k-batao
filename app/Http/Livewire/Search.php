@@ -30,15 +30,16 @@ class Search extends Component
         $api_url = 'https://api.peekalink.io/';
         $response = Http::withHeaders([
             'X-API-Key' => '6879c893-666c-4568-b8a3-351d21d6b3b6'
-        ])->post($api_url, [ 'link' => $this->url, ]);
-        $this->preview = json_decode($response->getBody(), true);
-        // dd($this->preview);
-        // return $this->preview['url'];
-        // $this->preview = $preview->toArray();
+            ])->post($api_url, [ 'link' => $this->url, ]);
+            $this->preview = json_decode($response->getBody(), true);
+            // dd($this->preview);
+            // return $this->preview['url'];
+            // $this->preview = $preview->toArray();
     }
 
     public function render()
     {
-        return view('livewire.search',['data' => $this->preview]);
+        $data = optional($this->preview);
+        return view('livewire.search',['data' => $data]);
     }
 }

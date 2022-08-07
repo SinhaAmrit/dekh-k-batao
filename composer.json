@@ -11,7 +11,6 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "dusterio/link-preview": "^1.2.1",
         "livewire/livewire": "^2.10",
         "laravel/lumen-framework": "5.2.*",
         "vlucas/phpdotenv": "~2.2",

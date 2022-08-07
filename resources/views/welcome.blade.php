@@ -31,7 +31,7 @@
         </div>
         <h3 class="font-montserrat font-medium text-xl mb-2">Ask</h3>
         <p class="text-center font-montserrat">
-          Send us a get request in the formate xyz.
+        Send us a get request in the formate <em>"https://{{request()->getHost();}}/link-preview?link=YOUR_URL_REQUEST"</em>
         </p>
       </div>
       <div class="flex-1 mx-8 flex flex-col items-center my-4">

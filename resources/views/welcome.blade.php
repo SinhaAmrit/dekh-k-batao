@@ -31,7 +31,7 @@
         </div>
         <h3 class="font-montserrat font-medium text-xl mb-2">Ask</h3>
         <p class="text-center font-montserrat">
-        Send us a get request in the formate <em>"https://{{request()->getHost();}}/link-preview?link=YOUR_URL_REQUEST"</em>
+        Send us a get request as <em>"https://{{request()->getHost();}}/link-preview?link=YOUR_URL_REQUEST"</em>
         </p>
       </div>
       <div class="flex-1 mx-8 flex flex-col items-center my-4">
@@ -65,12 +65,9 @@
       <div class="flex items-start font-montserrat my-6 mr-10">
         <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
         <div>
-          <h3 class="font-semibold text-2xl">Feature #1</h3>
+          <h3 class="font-semibold text-2xl">Digital Note taking</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-            culpa consequuntur saepe quibusdam labore, est ex ducimus
-            tempore, quos illum officiis, pariatur ea placeat.
+            Screenshots makes your note more interesting.
           </p>
         </div>
       </div>
@@ -78,12 +75,9 @@
       <div class="flex items-start font-montserrat my-6 mr-10">
         <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
         <div>
-          <h3 class="font-semibold text-2xl">Feature #2</h3>
+          <h3 class="font-semibold text-2xl">For messaging apps</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-            culpa consequuntur saepe quibusdam labore, est ex ducimus
-            tempore, quos illum officiis, pariatur ea placeat.
+            Add valuable context to conversations with our API.
           </p>
         </div>
       </div>
@@ -91,12 +85,9 @@
       <div class="flex items-start font-montserrat my-6 mr-10">
         <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
         <div>
-          <h3 class="font-semibold text-2xl">Feature #3</h3>
+          <h3 class="font-semibold text-2xl">For Social Networks</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-            culpa consequuntur saepe quibusdam labore, est ex ducimus
-            tempore, quos illum officiis, pariatur ea placeat.
+            Turn sharing links into sharing content.
           </p>
         </div>
       </div>
@@ -104,12 +95,9 @@
       <div class="flex items-start font-montserrat my-6 mr-10">
         <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
         <div>
-          <h3 class="font-semibold text-2xl">Feature #4</h3>
+          <h3 class="font-semibold text-2xl">For your next big thing</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-            culpa consequuntur saepe quibusdam labore, est ex ducimus
-            tempore, quos illum officiis, pariatur ea placeat.
+            Links are everywhere. Help your users make sense of them.
           </p>
         </div>
       </div>

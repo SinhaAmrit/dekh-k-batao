@@ -4,24 +4,24 @@
     <div class="md:flex-1 md:mr-10">
       <img src="dist/assets/mainLogo.jpg" class="mt-14 px-6 w-auto sm:px-0 sm:w-2/3 sm:mt-0 mb-7">
       <span class="block w-auto sm:w-5/6">
-        👀 Link previews like in 💬 Telegram/Whatsapp/Notion, but as 🖼 images for use in any 📝 note taking tool ⟶ Ideal when you take plain text notes but want to remember videos, movies, games, websites more visually
+        We magically preview any link 😉
       </span>
       <p class="mt-5 underline font-pt-serif font-secondary mb-4">
         Enter a complete URL so we can crawl through.
-</p>
-<div class="font-montserrat">
-  <div class="md:flex-1 md:mr-10">
-    <form wire:submit.prevent="searchURL">
-      @error('url') <span class="block text-xs text-red-700 ">{{ $message }}</span> @enderror
-      <input type="text" name="url" wire:model.lazy="url" class="w-2/3 p-4 mb-2 bg-secondary border-2 border-solid rounded-lg" placeholder="{{ \Illuminate\Foundation\Inspiring::quote() }}" @if(isset($preview)) disabled @endif>
-      <button type="submit" class="bg-black text-xl px-5 py-3 rounded-lg border-2 border-black border-solid text-white mr-2 mb-2 @error('url') opacity-60 cursor-not-allowed @enderror" @error('preview') disabled @enderror>
-        Search 
-      </button>
-      <span class="inline animate-ping" wire:loading.delay.longer>⭕</span>
-    </form>
-    @if (session()->has('message'))
-            <div class="alert alert-success">
-                {{ session('message') }}
+      </p>
+      <div class="font-montserrat">
+        <div class="md:flex-1 md:mr-10">
+          <form wire:submit.prevent="searchURL">
+            @error('url') <span class="block text-xs text-red-700 ">{{ $message }}</span> @enderror
+            <input type="text" name="url" wire:model.lazy="url" class="w-2/3 p-4 mb-2 bg-secondary border-2 border-solid rounded-lg" placeholder="{{ \Illuminate\Foundation\Inspiring::quote() }}" @if(isset($preview)) disabled @endif>
+            <button type="submit" class="bg-black text-xl px-5 py-3 rounded-lg border-2 border-black border-solid text-white mr-2 mb-2 @error('url') opacity-60 cursor-not-allowed @enderror" @error('preview') disabled @enderror>
+              Search 
+            </button>
+          <span class="inline animate-ping" wire:loading.delay.longer>⭕</span>
+        </form>
+        @if (session()->has('message'))
+          <div class="alert alert-success">
+            {{ session('message') }}
             </div>
         @endif
   </div>

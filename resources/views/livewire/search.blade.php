@@ -34,10 +34,10 @@
       </div>
       <img class="animate-pulse justify-self-center @if(isset($data['url']) || isset($data['detail'])) hidden @endif" src='dist/assets/search-animation.gif' alt="Macbook" />
       @if(isset($data['url']) && !isset($data['detail']))
-      <div id="card" class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+      <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
         <span href="{{$preview['url']}}" class="w-full block h-full">
           <img alt="opps! No cover image to show 😢" src="{{ $preview['image']['url']}}" class="max-h-40 w-full object-cover"/>
-          <div class="bg-white dark:bg-gray-800 w-full p-4">
+          <div id="card" class="bg-white dark:bg-gray-800 w-full p-4">
             <div class="flex items-center">
               @if(isset($data['icon']['url']))
               <a href="#" class="block relative">

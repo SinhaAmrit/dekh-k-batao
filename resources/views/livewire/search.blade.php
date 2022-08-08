@@ -35,8 +35,10 @@
       <img class="animate-pulse justify-self-center @if(isset($data['url']) || isset($data['detail'])) hidden @endif" src='dist/assets/search-animation.gif' alt="Macbook" />
       @if(isset($data['url']) && !isset($data['detail']))
       <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
-        <span href="{{$preview['url']}}" class="w-full block h-full">
-          <img alt="opps! No cover image to show 😢" src="{{ $preview['image']['url']}}" class="max-h-40 w-full object-cover"/>
+        <span href="{{$data['url']}}" class="w-full block h-full">
+          @if(isset($data['image']['url']))
+          <img alt="opps! No cover image to show 😢" src="{{ $data['image']['url']}}" class="max-h-40 w-full object-cover"/>
+          @endif
           <div id="card" class="bg-white dark:bg-gray-800 w-full p-4">
             <div class="flex items-center">
               @if(isset($data['icon']['url']))
@@ -49,8 +51,9 @@
                 {{$data['name']}} 
                 <span class="text-xs">({{$data['domain']}}) </span>
               </span>
+              
               <span class="dark:text-gray-400 text-xs flex items-center">
-                Size: @if(isset($data['size'])) {{$data['size']}} @else -- @endif Bytes @if(isset($data['redirected']) && $data['redirected'] == true)| redirected URL @endif @if(isset($data['trackersDetected']) && $data['trackersDetected'] == true)| Trackers Detected @endif
+              @if(isset($data['size']))  Size: {{$data['size']}} Bytes @endif @if(isset($data['redirected']) && $data['redirected'] == true) Redirected URL @endif @if(isset($data['trackersDetected']) && $data['trackersDetected'] == true) Trackers Detected @endif
               </span>
               </div>
             </div>

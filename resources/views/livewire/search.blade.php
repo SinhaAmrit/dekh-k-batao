@@ -50,7 +50,7 @@
                 <span class="text-xs">({{$data['domain']}}) </span>
               </span>
               <span class="dark:text-gray-400 text-xs flex items-center">
-                Size: @if(isset($data['size'])) {{$data['size']}} @else -- @endif KB @if(isset($data['redirected']) && $data['redirected'] == true)| redirected URL @endif @if(isset($data['trackersDetected']) && $data['trackersDetected'] == true)| Trackers Detected @endif
+                Size: @if(isset($data['size'])) {{$data['size']}} @else -- @endif Bytes @if(isset($data['redirected']) && $data['redirected'] == true)| redirected URL @endif @if(isset($data['trackersDetected']) && $data['trackersDetected'] == true)| Trackers Detected @endif
               </span>
               </div>
             </div>
